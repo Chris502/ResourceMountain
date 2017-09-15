@@ -10,10 +10,12 @@ const express = require('express'),
       session = require('express-session')
       
 
-
+app.use(express.static(__dirname + '../build'));
 let app = express()
 app.use(cors())
 app.use(bodyParser.json())
+
+
 
 
 
