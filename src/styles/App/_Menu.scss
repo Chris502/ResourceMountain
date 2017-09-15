@@ -13,9 +13,11 @@
     letter-spacing: 2px;
     margin-top: 12px;
     padding-left: 20%;
+    text-decoration: none;
 }
 .menu-item:hover{
-        color:#0CA8FF
+        color:#0CA8FF;
+        text-decoration: underline;
 
 
 }

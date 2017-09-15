@@ -51,6 +51,7 @@ class React1 extends Component {
 	render() {
 		let results = this.state.tuts.map((c, index) => {
 			if (index <= this.state.index && index <= this.state.tuts.length) {
+				
 				return (
 					<div key={index} className="response-list">
 						<h5 className='techName'>{c.tech}  </h5><a href={c.link} className='techLink'>{c.link}</a>

@@ -41,7 +41,7 @@
 }
 .text-area{
     border:2px dashed darkgray;
-    height: 80px;
+    height: 20vh;
     resize: none;
     padding-left: 8px;
     margin-bottom: 5%;
@@ -55,6 +55,7 @@
     margin-left: 10%;
     
 }
+
 @media(min-width: 600px){
     .Modal{
         width:50vw;

@@ -12,6 +12,7 @@ import es6Logo from './../styles/es6.svg'
 import sqlLogo from './../styles/sql.svg'
 import nodeLogo from './../styles/node.svg'
 import reduxLogo from './../styles/redux.svg'
+import sassLogo from './../styles/sass.svg'
 class App extends Component {
 	constructor() {
 		super()
@@ -115,6 +116,7 @@ class App extends Component {
 										<img src={sqlLogo} alt="wee" />
 										<img src={nodeLogo} alt="wee" />
 										<img src={reduxLogo} alt="wee" />
+										<img src={sassLogo} alt="wee" />
 
 									</div>
 								</div>
