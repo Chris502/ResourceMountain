@@ -1,0 +1,117 @@
+.response-list-admin{
+    border-top: 2px solid #9FD6F0;
+    border-bottom: 2px solid #A7DDEE;
+    padding-left: 10vw;
+    a, a:visited{
+        text-decoration: none;
+        color: lightblue
+        
+    }
+}
+.response-list-userTuts{
+    position: relative;
+    width: 100%;
+    border: .5px solid grey;
+    overflow: scroll;
+    
+    
+    margin-bottom: 2%;
+    h1{
+        font-family: monospace;
+        font-size: 1.5rem;
+        margin-bottom: 2%;
+        
+    }
+    h3{
+        font-size: 1.25rem;
+        padding-left: 20%;
+        margin-bottom: 2%;
+    }
+    p{
+        position: absolute;
+        font-family: monospace;
+        font-size: 1.5rem;
+        top:50%;
+        
+        
+    }
+    h5{
+        font-family: $menuFont;
+  
+    }
+}
+
+.link-desc{
+    width:40%;
+}
+.html{
+    height: 100%;
+}
+
+
+.active{
+    font-family: $landFont;
+    background: #383d44;
+    padding: 10px;
+    font-size: 1.5rem; 
+    color: whitesmoke;
+    
+  
+}
+.not-active{
+    font-size: 1rem;
+    font-family: $landFont;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    color: #37B6FF
+}
+.user-list{
+    
+    list-style-type: none;
+    
+    border-bottom: 4px solid #CECECE
+}
+.credentials{
+    font-size: 1.5rem;
+}
+.admin-panel{
+    //margin: 5%;
+    background: whitesmoke;
+    border:3px solid #9FD6F0;
+    width: 90%;
+    margin-left: 2%;
+    button{
+        height: 30px;
+    }
+}
+.admin-main{
+    background: #383d44;
+    min-height: 120vh;
+    margin: 0;
+}
+.homeButton{
+    color: whitesmoke;
+    font-size: 2rem;
+    border-left: 2px dashed whitesmoke;
+    border-right: 2px dashed whitesmoke
+    
+}
+
+
+.no-auth{
+    color: whitesmoke;
+    font-family: $menuFont;
+    font-size: 32px;
+    padding-left: 39vw;
+    padding-top: 40vh;
+}
+
+//@media(min-width: 700px){
+//    .no-auth{
+//        
+//
+//    }
+//}

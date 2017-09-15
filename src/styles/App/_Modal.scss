@@ -1,0 +1,63 @@
+.Modal{
+    position: absolute;
+    border: 4px solid blue;
+    top:10%;
+    height: 80vh;
+    width:100vw;
+    background: #ADA996;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    p{
+        text-align: center;
+    }
+}
+.Overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(8, 8, 8, 0.5);
+}
+.input-bars{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 0 10px;
+    select{
+        margin-bottom: 20px;
+        height: 50px;
+        font-family: $menuFont;
+        font-size: 1.5rem;
+    }
+   
+}
+.text-box{
+    border:2px dashed darkgray;
+    padding-left: 8px;
+    margin-bottom: 5%;
+    height:30px;
+    font-size: 20px;
+}
+.text-area{
+    border:2px dashed darkgray;
+    height: 80px;
+    resize: none;
+    padding-left: 8px;
+    margin-bottom: 5%;
+    font-size: 20px;
+}
+.button-modal{
+    font-family: $menuFont;
+    font-size: 28px;
+    width:80%;
+    height: 60px;
+    margin-left: 10%;
+    
+}
+@media(min-width: 600px){
+    .Modal{
+        width:50vw;
+        left: 27%;
+    }
+}

@@ -1,0 +1,26 @@
+
+
+
+.techLink{
+    font-family: $bodyFont;
+    padding: 10px;
+}
+.techLink:hover{
+    font-size: 30px;
+    color:#0D84C4
+}
+.linkDesc{
+    font-family: $bodyFont;
+    font-size: .8em;
+    padding: 10px;
+}
+
+
+
+@media (min-width: 500px){
+    .linkDesc{
+        font-family: $bodyFont;
+        font-size: 1.4em;
+    }
+   
+}

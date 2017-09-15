@@ -1,0 +1,38 @@
+{
+  "name": "personal",
+  "version": "0.1.0",
+  "main": "src/utils/server.js",
+  "proxy": "http://localhost:3001",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "font-awesome": "^4.7.0",
+    "massive": "^3.2.2",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "passport": "^0.4.0",
+    "passport-auth0": "^0.6.0",
+    "react": "^15.6.1",
+    "react-burger-menu": "^2.1.6",
+    "react-dom": "^15.6.1",
+    "react-modal": "^2.3.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.1.2",
+    "react-scripts": "1.0.11",
+    "redux": "^3.7.2",
+    "session": "^0.1.0"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

@@ -1,0 +1,5 @@
+@mixin ShadowBox(){
+    -webkit-box-shadow: 7px 10px 0px 2px #383d44;
+    -moz-box-shadow: 7px 10px 0px 2px #383d44;
+    box-shadow: 7px 10px 0px 2px #383d44;
+}

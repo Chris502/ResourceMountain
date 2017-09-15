@@ -1,0 +1,81 @@
+.Modal-user{
+    position: absolute;
+    border: 2px solid whitesmoke;
+    top: 60px;
+    left:22%;
+    overflow: scroll;
+    background: #5D6163;
+    
+}
+.user-item{
+    font-family: $userModal;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+
+    
+}
+a{
+    cursor: pointer;
+}
+.stats-button, .log-out{
+    background: whitesmoke;
+    border: 2px solid #05D9FF
+}
+
+.UserPic{
+    display:none
+}
+.modal-username{
+    color: whitesmoke;
+    margin-top: 5px;
+    font-size: 1rem;
+    font-family: $userModal
+}
+.user-span{
+    font-size: 1.2rem;
+    font-family: $userModal;
+    color: lightgray
+
+
+}
+.Overlay{
+    
+}
+@media (min-width: 425px){
+    .modal-username{
+        font-size: 1.2rem;
+        padding-right: 5px;
+       // font-family: $userModal
+    }
+    .user-span{
+        font-size: 1.6rem;
+        font-family: $userModal
+    
+
+}
+}
+
+@media (min-width:850px){
+    
+    .UserPic{
+            display: block;
+            height: 250px;
+            width: 250px;
+            border: 2px solid whitesmoke;
+            margin: auto
+        }
+        .user-pic-box{
+            padding-top:5px;
+            
+        }
+        .modal-username{
+            background: whitesmoke;
+            color: black;
+            
+        }
+        .user-span{
+            color: black;
+        }
+    }
+
