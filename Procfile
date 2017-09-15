@@ -1,1 +1,1 @@
-web: node utils/server.js
+web: node src/utils/server.js
