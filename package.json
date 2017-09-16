@@ -2,7 +2,7 @@
   "name": "personal",
   "version": "0.1.0",
   "main": "src/utils/server.js",
-  "proxy": "http://localhost:3001",
+  "proxy": "http://138.197.196.116",
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
