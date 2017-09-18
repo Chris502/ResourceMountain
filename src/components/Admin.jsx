@@ -211,7 +211,8 @@ class Admin extends Component {
 
             {dropper}
         </select>
-            <button onClick={_ => this.getTutsByUser(this.state.tutsID)}></button>
+        <br/>
+            <button onClick={_ => this.getTutsByUser(this.state.tutsID)}>Filter by ID</button>
             {tutsByUser}
 
         </div>
