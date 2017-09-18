@@ -67,7 +67,7 @@ class MenuList extends Component {
                     <Link to='/Admin' className="menu-item"><i className="fa fa-user-circle" aria-hidden="true"></i>
                         Admin</Link>
 
-                    <a href="http://localhost:3001/auth/logout" className='menu-item'><i className="fa fa-sign-out" aria-hidden="true"></i>
+                    <a href="/auth/logout" className='menu-item'><i className="fa fa-sign-out" aria-hidden="true"></i>
                         Log Out</a>
 
                 </Menu>
