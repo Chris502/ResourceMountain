@@ -204,6 +204,7 @@ class Admin extends Component {
                 <option value='guest'>Guest</option>
             </select>
             <button onClick={this.permUpdate}>Update</button>
+            <br/>
             <select
             value={this.state.tutsID}
             onChange={this.handleTutID}>
@@ -211,7 +212,7 @@ class Admin extends Component {
 
             {dropper}
         </select>
-        <br/>
+        
             <button onClick={_ => this.getTutsByUser(this.state.tutsID)}>Filter by ID</button>
             {tutsByUser}
 
