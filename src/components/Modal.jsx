@@ -79,7 +79,8 @@ class Modal extends Component {
             techCat: '',
             link: '',
             linkdesc: '',
-            pic: ''
+            pic: '',
+            showModal: false
         })
     }
     handleTech(e) {
@@ -134,7 +135,7 @@ class Modal extends Component {
                             <input className='text-box' type='text' placeholder='Link' value={this.state.link} onChange={e => { this.handleLink(e.target.value) }} />
                             <textarea rows='3' className='text-area' type='text' placeholder='LinkDesc' value={this.state.linkdesc} onChange={e => { this.handleLinkDesc(e.target.value) }}> </textarea>
                             <button className='button-modal' onClick={this.postThings}>Submit</button>
-                            <button className='button-modal right' onClick={this.handleCloseModal}>Close Modal</button>
+                            <button className='button-modal right' onClick={this.handleCloseModal}>Close</button>
                         </div>
                     </div>
 

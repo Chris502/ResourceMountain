@@ -46,7 +46,7 @@ class UserModal extends React.Component {
     render() {
         const username = localStorage.getItem("user")
         const picc = localStorage.getItem("user-pic")
-        const persID = ths.props.userID
+        const persID = this.props.userID
 
         let stats = this.state.tutCount ? <h2><span className="user-span">User Uploads:</span> &nbsp; {this.state.tutCount}</h2> : <a className="user-item" onClick={_ => this.getCount(persID)}>
             Stats</a>
