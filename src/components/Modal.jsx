@@ -73,7 +73,7 @@ class Modal extends Component {
                 link: this.state.link,
                 linkdesc: this.state.linkdesc,
                 pic: this.state.pic,
-                userID: localStorage.getItem("id22")
+                userID: this.props.userID
             }) : alert("Please complete all fields")
         this.setState({
             techCat: '',
