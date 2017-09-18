@@ -46,7 +46,7 @@ class UserModal extends React.Component {
     render() {
         const username = localStorage.getItem("user")
         const picc = localStorage.getItem("user-pic")
-        const persID = localStorage.getItem("id22")
+        const persID = ths.props.userID
 
         let stats = this.state.tutCount ? <h2><span className="user-span">User Uploads:</span> &nbsp; {this.state.tutCount}</h2> : <a className="user-item" onClick={_ => this.getCount(persID)}>
             Stats</a>
@@ -77,7 +77,7 @@ class UserModal extends React.Component {
                         {stats}
                     </div>
                     <div className="log-out">
-                        <a href="http://localhost:3001/auth/logout" className='user-item'>Log Out</a>
+                        <a href="/auth/logout" className='user-item'>Log Out</a>
                     </div>
 
 
