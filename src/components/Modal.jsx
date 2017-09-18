@@ -28,7 +28,7 @@ class Modal extends Component {
         //this.updateList = this.updateList.bind(this)
     }
     componentWillMount() {
-        axios.get('http://localhost:3001/getNames').then(response => {
+        axios.get('/getNames').then(response => {
             console.log(response)
             this.setState({
                 techNames: response.data
@@ -37,7 +37,7 @@ class Modal extends Component {
     }
     componentDidMount() {
         if (this.state.showModal === false)
-            axios.get('http://localhost:3001/allTuts').then(response => {
+            axios.get('/allTuts').then(response => {
                 console.log(response)
                 this.setState({
                     newTut: response.data
@@ -134,7 +134,7 @@ class Modal extends Component {
                             <input className='text-box' type='text' placeholder='Link' value={this.state.link} onChange={e => { this.handleLink(e.target.value) }} />
                             <textarea rows='3' className='text-area' type='text' placeholder='LinkDesc' value={this.state.linkdesc} onChange={e => { this.handleLinkDesc(e.target.value) }}> </textarea>
                             <button className='button-modal' onClick={this.postThings}>Submit</button>
-                            <button className='button-modal' onClick={this.handleCloseModal}>Close Modal</button>
+                            <button className='button-modal right' onClick={this.handleCloseModal}>Close Modal</button>
                         </div>
                     </div>
 

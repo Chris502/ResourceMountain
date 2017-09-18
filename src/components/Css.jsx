@@ -18,7 +18,7 @@ class Css extends Component {
 	}
 
 	componentWillMount() {
-		axios.get('category/css').then(response => {
+		axios.get('/category/css').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

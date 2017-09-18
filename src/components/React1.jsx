@@ -18,7 +18,7 @@ class React1 extends Component {
 	}
 
 	componentWillMount() {
-		axios.get('http://localhost:3001/category/react').then(response => {
+		axios.get('/category/react').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

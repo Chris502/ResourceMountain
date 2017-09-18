@@ -16,7 +16,7 @@ class Git extends Component {
 		this.lessStuff = this.lessStuff.bind(this)
 	}
 	componentWillMount() {
-		axios.get('http://localhost:3001/category/git').then(response => {
+		axios.get('/category/git').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

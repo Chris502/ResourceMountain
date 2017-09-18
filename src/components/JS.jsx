@@ -17,7 +17,7 @@ class JS extends Component {
 		this.lessStuff = this.lessStuff.bind(this)
 	}
 	componentWillMount() {
-		axios.get('http://localhost:3001/category/javascript').then(response => {
+		axios.get('/category/javascript').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

@@ -18,7 +18,7 @@ class Node extends Component {
 	}
 
 	componentWillMount() {
-		axios.get('http://localhost:3001/category/nodejs').then(response => {
+		axios.get('/category/nodejs').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

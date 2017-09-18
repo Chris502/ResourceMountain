@@ -8,14 +8,16 @@ const express = require('express'),
       passport = require('passport'),
       Auth0Strategy = require('passport-auth0'),
       session = require('express-session')
+      path = require('path')
       
 
 
 let app = express()
+const port = 3001
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(express.static(__dirname + '../build'));
+app.use(express.static(path.resolve(__dirname,'../..', 'build')));
 
 
 
@@ -54,7 +56,6 @@ massive({
 
 
 
-  let port = 3001
 
 
 
@@ -67,8 +68,8 @@ massive({
   app.get('/auth', passport.authenticate('auth0'));
   
   app.get('/auth/callback', passport.authenticate('auth0',{
-      successRedirect: 'http://138.197.196.116:3000/#/Home',
-      failureRedirect:'http://138.197.196.116:3000/'
+      successRedirect: 'http://138.197.196.116:3001/#/Home',
+      failureRedirect:'http://138.197.196.116:3001/'
   }))
   passport.serializeUser(function(user, done) {
       console.log( "first user: ",user)
@@ -198,12 +199,21 @@ massive({
   //==========LOG OUT=========///
   app.get('/auth/logout', (req,res,next) =>{
     req.logOut();
-    res.status(200).redirect('http://138.197.196.116:3000')
+    res.status(200).redirect('http://138.197.196.116:3001')
 })
 
+
+//+++++++CATCH ALL+++++++++++//
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+});
   
 
 
   app.listen(port, ()=>{
       console.log("I'm watchng you Chris")
   })
+
+
+
+  

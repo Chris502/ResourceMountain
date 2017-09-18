@@ -19,7 +19,7 @@ class MenuList extends Component {
     }
 
     componentWillMount() {
-        axios.get('http://localhost:3001/getNames').then(response => {
+        axios.get('/getNames').then(response => {
             console.log(response)
             this.setState({
                 tech: response.data

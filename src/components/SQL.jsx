@@ -18,7 +18,7 @@ class mySQL extends Component {
 	}
 
 	componentWillMount() {
-		axios.get('http://localhost:3001/category/SQL').then(response => {
+		axios.get('/category/SQL').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data

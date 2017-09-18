@@ -44,7 +44,7 @@ class App extends Component {
 			})
 
 		})
-		axios.get('http://localhost:3001/allTuts').then(response => {
+		axios.get('/allTuts').then(response => {
 			console.log(response)
 			this.setState({
 				tuts: response.data
@@ -127,7 +127,7 @@ class App extends Component {
 							<div className="search-head"><h1> Search Tutorials</h1></div>
 							<div className="input-search">
 								<input type="text" value={this.state.searchVal} onChange={this.handleSearch} placeholder="Search Here"></input>
-								<button onClick={_ => this.pushSearch(this.state.searchVal)}>  test</button>
+								<button onClick={_ => this.pushSearch(this.state.searchVal)}> Search</button>
 							</div>
 							{search}
 						</div>
