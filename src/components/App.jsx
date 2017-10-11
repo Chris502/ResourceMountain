@@ -13,6 +13,15 @@ import sqlLogo from './../styles/sql.svg'
 import nodeLogo from './../styles/node.svg'
 import reduxLogo from './../styles/redux.svg'
 import sassLogo from './../styles/sass.svg'
+import AppBar from 'material-ui/AppBar';
+import Header from './Header.jsx'
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+
+
+
+
 class App extends Component {
 	constructor() {
 		super()
@@ -27,6 +36,7 @@ class App extends Component {
 		//this.getName=this.getName.bind(this);
 		this.handleSearch = this.handleSearch.bind(this)
 		this.pushSearch = this.pushSearch.bind(this)
+		this.handleTouchTap = this.handleTouchTap.bind(this)
 
 	}
 	componentWillMount() {
@@ -65,7 +75,9 @@ class App extends Component {
 	}
 
 
-
+	handleTouchTap() {
+		alert('onClick triggered on the title component');
+	}
 
 
 	render() {
@@ -74,12 +86,19 @@ class App extends Component {
 		let recent = this.state.tuts.map((c, index) => {
 			if (index <= 5)
 				return (
-					<div className="recent-tuts" key={index}>
-						<h3>{c.tech}</h3>
-						<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>
-						<p>{c.linkdesc}</p>
+					<Card className="card-box">
+						<CardHeader
+							title={<h3>{c.tech}</h3>}
+							subtitle={<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>}
+							actAsExpander={true}
+							showExpandableButton={true}
+						/>
+						<CardText expandable={true}><p>{c.linkdesc}</p>
 						<p>{new Date(c.datecreated).toString()}</p>
-					</div>
+										
+   						</CardText>
+					</Card>	
+					
 				)
 		})
 		let search = this.state.searchResults.map((c, index) => {
@@ -94,47 +113,48 @@ class App extends Component {
 
 		})
 		return (
-			<div className='App'>
-				<MenuList />
-				<div className='UserBox-app'>
-					<UserModal />
-					<Modal />
-				</div>
-				<div className="app-content">
-					<div className="home-box">
+			<MuiThemeProvider>
+				<div className='App'>
+					<Header />
+					<MenuList />
+
+					<div className="app-content">
+						<div className="home-box">
 
 
-						<div className="recent-tut-box">
-							<div className="recents-head">
-								<div className="welcome-head">
-									<h2 className="para-wel">Welcome to the Resource Website at DevMountain. This is a repository of all the resources I used throughtout my cohort to solidify the concepts taught at <span> DevMountain</span>. Technologies used to create this site are listed below! </h2>
+							<div className="recent-tut-box">
+								<div className="recents-head">
+									<div className="welcome-head">
+										<h2 className="para-wel">Welcome to the Resource Website at DevMountain. This is a repository of all the resources I used throughtout my cohort to solidify the concepts taught at <span> DevMountain</span>. Technologies used to create this site are listed below! </h2>
 
 
-									<div className="tech-box">
-										<img src={reactLogo} alt="wee" />
-										<img src={es6Logo} alt="wee" />
-										<img src={sqlLogo} alt="wee" />
-										<img src={nodeLogo} alt="wee" />
-										<img src={reduxLogo} alt="wee" />
-										<img src={sassLogo} alt="wee" />
+										<div className="tech-box">
+											<img src={reactLogo} alt="wee" />
+											<img src={es6Logo} alt="wee" />
+											<img src={sqlLogo} alt="wee" />
+											<img src={nodeLogo} alt="wee" />
+											<img src={reduxLogo} alt="wee" />
+											<img src={sassLogo} alt="wee" />
 
+										</div>
 									</div>
-								</div>
-								<h1> Recent Tuts</h1></div>
-							{recent}
-						</div>
-						<div className="recent-tut-box searcher">
-							<div className="search-head"><h1> Search Tutorials</h1></div>
-							<div className="input-search">
-								<input type="text" value={this.state.searchVal} onChange={this.handleSearch} placeholder="Search Here"></input>
-								<button onClick={_ => this.pushSearch(this.state.searchVal)}> Search</button>
+									<h1> Recent Tuts</h1></div>
+								{recent}
 							</div>
-							{search}
+							<div className="recent-tut-box searcher">
+								<div className="search-head"><h1> Search Tutorials</h1></div>
+								<div className="input-search">
+									<input type="text" value={this.state.searchVal} onChange={this.handleSearch} placeholder="Search Here"></input>
+									<button onClick={_ => this.pushSearch(this.state.searchVal)}> Search</button>
+								</div>
+								{search}
+							</div>
 						</div>
+
 					</div>
 
 				</div>
-			</div>
+			</MuiThemeProvider>
 		)
 	}
 }

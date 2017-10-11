@@ -113,7 +113,7 @@ class Modal extends Component {
         console.log("PICTURE" + this.state.techCat)
         console.log(this.props.userID)
         return (
-            <div className='modal'>
+            <div className=''>
                 <button onClick={this.handleOpenModal}>Resource Management</button>
                 <ReactModal
                     isOpen={this.state.showModal}

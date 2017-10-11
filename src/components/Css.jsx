@@ -4,6 +4,8 @@ import MenuList from './Menu.jsx'
 import Modal from './Modal.jsx'
 import { connect } from 'react-redux'
 import UserModal from './UserModal'
+import Header from './Header.jsx'
+
 
 
 class Css extends Component {
@@ -66,8 +68,7 @@ class Css extends Component {
 		})
 		return (
 			<div className='App'>
-				<MenuList />
-
+					<Header/>
 				<div className="AllTech">
 					<div className='UserBox-app'>
 						<UserModal />

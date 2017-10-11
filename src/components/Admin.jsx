@@ -105,8 +105,8 @@ class Admin extends Component {
             updatePerm: e.target.value
         })
     }
-    permUpdate() {
-        axios.put('/user', {
+    permUpdate(id) {
+        axios.put('/user/', {
             id: this.state.updateId,
             permission: this.state.updatePerm
         }).then(response =>{

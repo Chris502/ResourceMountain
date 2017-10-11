@@ -76,9 +76,9 @@ class AllTech extends Component {
 
 
 		return (
-			<div className='App'>
+			<div className=''>
 				<MenuList />
-				<div className='UserBox-app'>
+				<div className=''>
 
 					<UserModal />
 					<Modal />
