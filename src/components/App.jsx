@@ -86,7 +86,7 @@ class App extends Component {
 		let recent = this.state.tuts.map((c, index) => {
 			if (index <= 5)
 				return (
-					<Card className="card-box">
+					<Card className="recent-tuts">
 						<CardHeader
 							title={<h3>{c.tech}</h3>}
 							subtitle={<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>}
@@ -103,12 +103,18 @@ class App extends Component {
 		})
 		let search = this.state.searchResults.map((c, index) => {
 			return (
-				<div className="recent-tuts" key={index}>
-					<h3>{c.tech}</h3>
-					<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>
-					<p>{c.linkdesc}</p>
-					<p>{new Date(c.datecreated).toString()}</p>
-				</div>
+				<Card className="recent-tuts">
+						<CardHeader
+							title={<h3>{c.tech}</h3>}
+							subtitle={<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>}
+							actAsExpander={true}
+							showExpandableButton={true}
+						/>
+						<CardText expandable={true}><p>{c.linkdesc}</p>
+						<p>{new Date(c.datecreated).toString()}</p>
+										
+   						</CardText>
+					</Card>	
 			)
 
 		})
@@ -116,7 +122,6 @@ class App extends Component {
 			<MuiThemeProvider>
 				<div className='App'>
 					<Header />
-					<MenuList />
 
 					<div className="app-content">
 						<div className="home-box">

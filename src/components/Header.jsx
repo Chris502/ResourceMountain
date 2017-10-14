@@ -14,6 +14,8 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import mtnSVG from './../styles/mtn.svg'
 import UserModal from './UserModal'
+import Paper from 'material-ui/Paper';
+
 /**
  * A simple example of `AppBar` with an icon on the right.
  * By default, the left icon is a navigation-menu.

@@ -17,7 +17,7 @@ const port = 3001
 
 app.use(cors())
 app.use(bodyParser.json())
-app.use(express.static(path.resolve(__dirname,'../..', 'build')));
+//app.use(express.static(path.resolve(__dirname,'../..', 'build')));
 
 
 
@@ -204,9 +204,9 @@ massive({
 
 
 //+++++++CATCH ALL+++++++++++//
-app.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
-});
+// app.get('/*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+// });
   
 
 
