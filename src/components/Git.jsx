@@ -4,6 +4,8 @@ import MenuList from './Menu.jsx'
 import Modal from './Modal.jsx'
 import { connect } from 'react-redux'
 import UserModal from './UserModal'
+import Header from './Header.jsx'
+
 
 class Git extends Component {
 	constructor() {
@@ -69,12 +71,9 @@ class Git extends Component {
 		console.log(this.props.user)
 		return (
 			<div className='App'>
-				<MenuList />
-
+				<Header/>
 				<div className="AllTech">
 					<div className='UserBox-app'>
-						<UserModal />
-						<Modal />
 					</div>
 					<div className="lister">
 						<h1>

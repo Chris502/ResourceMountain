@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import MenuList from './Menu.jsx'
 import Modal from './Modal.jsx'
-import {connect} from 'react-redux'
-import UserModal from './UserModal'
+import { connect } from 'react-redux'
+import Header from './Header.jsx'
 
 
 class JS extends Component {
@@ -64,14 +64,9 @@ class JS extends Component {
 		})
 		return (
 			<div className='App'>
-				<MenuList />
-
+				<Header />
 				<div className="AllTech">
-					<div className='UserBox-app'>
-						<UserModal/>
-						
-						<Modal />
-					</div>
+
 					<div className="lister">
 						<h1>
 							<i className="fa fa-language" aria-hidden="true"></i>
@@ -92,8 +87,8 @@ class JS extends Component {
 		)
 	}
 }
-function mapStateToProps(state){
-	return{
+function mapStateToProps(state) {
+	return {
 		authName: state.authName,
 		authPict: state.authPict,
 		userID: state.userID
