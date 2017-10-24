@@ -78,7 +78,7 @@ class UserModal extends React.Component {
                  zDepth={1}
                  style={{'borderRadius': 50,'zIndex':1}}
                  onClick={this.handleTouchTap}
-                 label="Click me"
+                 label="My Profile"
                />
                <Popover
                  open={this.state.open}

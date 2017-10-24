@@ -56,19 +56,25 @@ class React1 extends Component {
 			if (index <= this.state.index && index <= this.state.tuts.length) {
 				
 				return (
-					<div key={index} className="response-list">
-						<h5 className='techName'>{c.tech}  </h5><a href={c.link} className='techLink'>{c.link}</a>
-						<p className='linkDesc'>{c.linkdesc}</p>
-						<p className='dateCreated'> {new Date(c.datecreated).toString()}</p>
-
-					</div>
-
+					<Card className="recent-tuts">
+						<CardHeader
+							title={<h3>{c.tech}</h3>}
+							subtitle={<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>}
+							actAsExpander={true}
+							showExpandableButton={true}
+						/>
+						<CardText expandable={true}><p>{c.linkdesc}</p>
+						<p>{new Date(c.datecreated).toString()}</p>
+										
+   						</CardText>
+					</Card>	
 				)
 
 
 			} return null
 		})
 		return (
+			<MuiThemeProvider>
 			<div className='App'>
 				<Header/>
 
@@ -90,6 +96,7 @@ class React1 extends Component {
 					</div>
 				</div>
 			</div>
+			</MuiThemeProvider>
 		)
 	}
 }
