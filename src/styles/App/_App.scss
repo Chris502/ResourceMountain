@@ -69,18 +69,6 @@ body, html{
     
     overflow: auto;
     ;
-    h1,h2{
-        padding-left: 12%;
-        text-align: left;
-        font-family: $bodyFont;
-        //color: whitesmoke;
-        font-size: 2rem;
-        
-    }
-    h2{
-        font-size: 1.2rem;
-        overflow-wrap: break-word
-    }
 }
 
 .response-list{
@@ -135,16 +123,28 @@ h5{
 .recent-tuts{
     border-top: 2px solid #0CA8FF;
     border-bottom: 2px solid #0CA8FF;
-    width: 46%;
+    width: 80%;
     margin: 2%;
     height:50%;
-    overflow-wrap: break-word;
+    overflow:scroll;
     background: #B1B1B1;
     @include ShadowBox();
     h3 {
         font-size: 1.2rem;
         color: #505050;
         font-family: $userModal
+    }
+      h1,h2{
+        padding-left: 12%;
+        text-align: left;
+        font-family: $bodyFont;
+        //color: whitesmoke;
+        font-size: 2rem;
+        
+    }
+    h2{
+        font-size: 1.2rem;
+        overflow-wrap: break-word
     }
     a{
         color:black;
@@ -189,6 +189,18 @@ h5{
         }
         h1{
             text-decoration: underline
+        }
+        h1,h2{
+            padding-left: 12%;
+            text-align: left;
+            font-family: $bodyFont;
+            //color: whitesmoke;
+            font-size: 2rem;
+            
+        }
+        h2{
+            font-size: 1.2rem;
+            overflow-wrap: break-word
         }
        
     }
@@ -297,11 +309,11 @@ h5{
     .background, .AllTech{
         text-align: center;
     }
-    .response-list{
-        //margin-left: 8vw;
-        margin-top: 2vh;
-        width: 100%;
-    }
+    // .response-list{
+    //     //margin-left: 8vw;
+    //     margin-top: 2vh;
+    //     width: 100%;
+    // }
 
     .UserBox-app{
         button{

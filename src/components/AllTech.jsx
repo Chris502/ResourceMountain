@@ -4,6 +4,9 @@ import MenuList from './Menu.jsx'
 import Modal from './Modal.jsx'
 import { connect } from 'react-redux'
 import UserModal from './UserModal.jsx'
+import Header from './Header.jsx'
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 //ReactModal.setAppElement("#modalBox")
 class AllTech extends Component {
@@ -77,13 +80,8 @@ class AllTech extends Component {
 
 		return (
 			<div className=''>
-				<MenuList />
-				<div className=''>
-
-					<UserModal />
-					<Modal />
-
-				</div>
+				<Header />
+				
 				<div className="AllTech">
 
 					<div className="lister">

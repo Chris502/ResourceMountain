@@ -4,6 +4,8 @@ import MenuList from './Menu.jsx'
 import Modal from './Modal.jsx'
 import { connect } from 'react-redux'
 import Header from './Header.jsx'
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 

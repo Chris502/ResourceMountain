@@ -5,6 +5,8 @@ import Modal from './Modal.jsx'
 import { connect } from 'react-redux'
 import UserModal from './UserModal'
 import Header from './Header.jsx'
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 class Git extends Component {
@@ -54,12 +56,18 @@ class Git extends Component {
 		let results = this.state.tuts.map((c, index) => {
 			if (index <= this.state.index && index <= this.props.tuts.length) {
 				return (
-					<div key={index} className="response-list">
-						<h5 className='techName'>{c.tech}  </h5><a href={c.link} className='techLink'>{c.link}</a>
-						<p className='linkDesc'>{c.linkdesc}</p>
-						<p className='dateCreated'> {new Date(c.datecreated).toString()}</p>
-
-					</div>
+					<Card className="recent-tuts">
+						<CardHeader
+							title={<h3>{c.tech}</h3>}
+							subtitle={<p><span className="resource-tag">Link:  &nbsp;</span>  <a href={c.link}>{c.link}</a> </p>}
+							actAsExpander={true}
+							showExpandableButton={true}
+						/>
+						<CardText expandable={true}><p>{c.linkdesc}</p>
+						<p>{new Date(c.datecreated).toString()}</p>
+										
+   						</CardText>
+					</Card>	
 
 				)
 
@@ -70,11 +78,11 @@ class Git extends Component {
 
 		console.log(this.props.user)
 		return (
+			<MuiThemeProvider>
 			<div className='App'>
 				<Header/>
 				<div className="AllTech">
-					<div className='UserBox-app'>
-					</div>
+					
 					<div className="lister">
 						<h1>
 							<i className="fa fa-github-alt fa-lg" aria-hidden="true"></i>
@@ -86,6 +94,7 @@ class Git extends Component {
 					</div>
 				</div>
 			</div>
+			</MuiThemeProvider>
 		)
 	}
 }

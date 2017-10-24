@@ -17,7 +17,7 @@ const port = 3001
 
 app.use(cors())
 app.use(bodyParser.json())
-//app.use(express.static(path.resolve(__dirname,'../..', 'build')));
+app.use(express.static(path.resolve(__dirname,'../..', 'build')));
 
 
 

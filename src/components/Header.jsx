@@ -76,8 +76,16 @@ class Header extends Component {
                         iconElementLeft={<i className="k" aria-hidden="true"></i>}
                     
                     />
-                    <Drawer open={this.state.open}>
+                    <Drawer 
+                    docked= {false}
+                    open={this.state.open}
+                    onRequestChange={(open) => this.setState({open})}
+>
                     <div className="menu-pic"><img src={mtnSVG}></img></div>
+                    <Link to='/Home' className="menu-item"><MenuItem><i className="fa fa-home" aria-hidden="true"></i>
+                        Home</MenuItem></Link>
+                    <Link to='/AllTech' className="menu-item"><MenuItem><i className="fa fa-calendar" aria-hidden="true"></i>
+                        Most Recent</MenuItem></Link>
 
                     {list}
         </Drawer>

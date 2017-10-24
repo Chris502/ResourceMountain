@@ -97,7 +97,7 @@ class UserModal extends React.Component {
                         </MenuItem>
                    <MenuItem primaryText="Help &amp; feedback" />
                    <MenuItem primaryText="Settings" />
-                   <MenuItem><a className='pop-link' href='http://localhost:3001/logout'> Sign Out</a></MenuItem>
+                  <a className='pop-link' href='http://localhost:3001/logout'> <MenuItem> Sign Out</MenuItem></a>
                  </Menu>
                </Popover>
              </div>
