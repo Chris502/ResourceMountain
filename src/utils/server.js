@@ -199,7 +199,7 @@ massive({
   //==========LOG OUT=========///
   app.get('/auth/logout', (req,res,next) =>{
     req.logOut();
-    res.status(200).redirect('http://138.197.196.116:3002')
+    res.status(200).redirect('http://www.reasourcemountain.site')
 })
 
 
