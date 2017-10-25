@@ -88,6 +88,7 @@ class Header extends Component {
                         Most Recent</MenuItem></Link>
 
                     {list}
+                    <Link to='/admin' className='menu-item'><MenuItem>Admin</MenuItem></Link>
         </Drawer>
         </div>
         </MuiThemeProvider>

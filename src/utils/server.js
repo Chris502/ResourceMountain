@@ -13,7 +13,7 @@ const express = require('express'),
 
 
 let app = express()
-const port = 3001
+const port = 3002
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -68,8 +68,8 @@ massive({
   app.get('/auth', passport.authenticate('auth0'));
   
   app.get('/auth/callback', passport.authenticate('auth0',{
-      successRedirect: 'http://localhost:3001/#/Home',
-      failureRedirect:'http://localhost:3001/'
+      successRedirect: 'http://138.197.196.116:3001/#/Home',
+      failureRedirect:'http://138.197.196.116:3001/'
   }))
   passport.serializeUser(function(user, done) {
       console.log( "first user: ",user)
@@ -199,7 +199,7 @@ massive({
   //==========LOG OUT=========///
   app.get('/auth/logout', (req,res,next) =>{
     req.logOut();
-    res.status(200).redirect('http://localhost:3001')
+    res.status(200).redirect('http://138.197.196.116:3001')
 })
 
 

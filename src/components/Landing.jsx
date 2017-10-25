@@ -29,7 +29,7 @@ export default class Lander extends Component {
                 </Anime>
                 <div className="landerBox">
 
-                    <a href="http://localhost:3001/auth"><button className='login-button'>Login</button></a>
+                    <a href="http://138.197.196.116:3002/auth"><button className='login-button'>Login</button></a>
 
                 </div>
                 </div>
