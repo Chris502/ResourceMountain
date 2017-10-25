@@ -68,8 +68,8 @@ massive({
   app.get('/auth', passport.authenticate('auth0'));
   
   app.get('/auth/callback', passport.authenticate('auth0',{
-      successRedirect: 'http://138.197.196.116:3002/#/Home',
-      failureRedirect:'http://138.197.196.116:3002/'
+      successRedirect: 'http://www.reasourcemountain.site/#/Home',
+      failureRedirect:'http://www.reasourcemountain.site/'
   }))
   passport.serializeUser(function(user, done) {
       console.log( "first user: ",user)
