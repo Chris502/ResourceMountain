@@ -8,6 +8,7 @@ src/**/*.css
 /coverage
 
 # production
+/build
 
 # misc
 .DS_Store
